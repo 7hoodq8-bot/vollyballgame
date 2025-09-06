@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dusmwnv4404g3"]
+[gd_scene load_steps=9 format=3 uid="uid://dusmwnv4404g3"]
 
 [sub_resource type="StandardMaterial3D" id="1"]
 albedo_color = Color(0.16, 0.5, 0.18, 1)
@@ -20,6 +20,12 @@ size = Vector3(0.05, 3, 10)
 
 [sub_resource type="BoxShape3D" id="6"]
 size = Vector3(0.05, 3, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_egh0b"]
+size = Vector3(30, 3, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pwfse"]
+size = Vector3(30, 3, 1)
 
 [node name="Main3D" type="Node3D"]
 
@@ -51,3 +57,13 @@ mesh = SubResource("4")
 [node name="NetCollision" type="CollisionShape3D" parent="NetBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("6")
+
+[node name="walll" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="walll"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.16669, 0)
+mesh = SubResource("BoxMesh_egh0b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="walll"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.169, 0)
+shape = SubResource("BoxShape3D_pwfse")
