@@ -28,12 +28,12 @@ transform = Transform3D(0.866025, 0.353553, -0.353553, 0, 0.707107, 0.707107, 0.
 light_energy = 1.2
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.707107, 0.40558, -0.579228, 0, 0.819152, 0.573576, 0.707107, 0.40558, -0.579228, 12, 12, 14)
+transform = Transform3D(0.961193, 0.0160709, 0.275408, -0.201575, 0.722482, 0.661352, -0.188349, -0.691203, 0.697685, 0.52354, 12, 13.9841)
 current = true
 fov = 50.0
 
 [node name="Court" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.907814, 0.419373, 0, -0.419373, 0.907814, -2.29484, -0.905492, 0)
+transform = Transform3D(1, 0, 0, 0, 0.907814, 0.419373, 0, -0.419373, 0.907814, -2.29484, 2.06069, 0)
 mesh = SubResource("2")
 
 [node name="GroundBody" type="StaticBody3D" parent="."]
@@ -43,7 +43,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 shape = SubResource("5")
 
 [node name="Net" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.92116, 0.335596)
+transform = Transform3D(-0.369958, 0, -0.929049, 0, 1, 0, 0.929049, 0, -0.369958, 0, 5.92116, 0.335596)
 mesh = SubResource("4")
 
 [node name="NetBody" type="StaticBody3D" parent="."]
